@@ -1,0 +1,50 @@
+﻿@model WebApplication4.Models.Department
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <p>Name</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            <p>Server Date</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Server_Date_Time)
+        </dd>
+
+        <dt>
+            <p>Created On</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Time_UTC)
+        </dd>
+
+        <dt>
+            <p>Update On</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Update_Date_Time_UTC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
